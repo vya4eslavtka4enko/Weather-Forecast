@@ -9,10 +9,6 @@ def get_data(place,forecast_days=None,kind=None):
     filtred_data = data['list']
     nr_values = 8 * forecast_days
     filtered_data = filtred_data[:nr_values]
-    if kind == "Temperature":
-        filtered_data = [dict['main']['temp'] for dict in filtred_data]
-    if kind == "Sky":
-        filtered_data = [dict['weather'][0]['main'] for dict in filtered_data]
     return filtered_data
 
 
